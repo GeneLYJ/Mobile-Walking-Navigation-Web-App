@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Navigator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <link rel="stylesheet" href="css/style.css" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="shortcut icon" sizes="196x196" href="images/icon.png" />
+        <link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.yellow-amber.min.css" />
+    </head>
+    <style>
+        body {
+    background: url(http://data.whicdn.com/images/33645559/bg4_large.png);
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+            height: 100%;
+        }
+    </style>
+    <body>
+        <!-- Your content here -->
+        <!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">WalkAbout Navigator</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+        <!-- Colored FAB button with ripple -->
+        <button class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon" onclick="addRoute()">
+            <i class="material-icons">add</i>
+        </button>
+      <!-- Navigation. We hide it in small screens. -->
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Team 229</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" onclick="viewPath(0, 0)" href="navigate.html">Lepak Place to Sport Centre</a>
+      <a class="mdl-navigation__link" onclick="viewPath(0, 1)" href="navigate.html">Main Gate to Coffee Bean</a>
+      <a class="mdl-navigation__link" href=""></a>
+      <a class="mdl-navigation__link" href=""></a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here -->   
+        <center><div class="displayFont"><h4>Server</h4></div><div id="pathList"></div></center>
+    </div>
+  </main>
+</div>
+        <!--   JavaScript files:   -->
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="js/utility.js"></script>
+        <script src="js/shared.js"></script>
+        <script src="js/mainPage.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDyj8znTDMh4G7kH6bSC4zI-j2OoHBFbZU&callback=initMap&libraries=geometry"></script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Route</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <link rel="shortcut icon" sizes="196x196" href="images/icon.png"/>
+    <link rel="apple-touch-icon-precomposed" href="images/icon.png"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-purple.min.css" />
+</head>
+<body>
+    <!-- Your content here -->
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+      <button onclick="location.href = 'index.html';" class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">arrow_back</i>
+    </button>
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">i-Navigator(User)</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div><button class="mdl-layout-icon mdl-button mdl-js-button mdl-button--icon" onclick="save()">
+        <i class="material-icons">save</i></button>
+    </div>
+  </header>
+
+  <main class="mdl-layout__content">
+    <div class="page-content"><!-- Your content goes here -->
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="button1" onclick="getLocation()">
+            <i class="material-icons">my_location</i>
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="button2" onclick="addMarker()">
+            <i class="material-icons">add_location</i>
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="button3" onclick="undo()">
+            <i class="material-icons">undo</i>
+        </button>
+        <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" id="button4" onclick="update()">
+            <i class="material-icons">center_focus_strong</i>
+        </button>
+    </div>
+      
+  </main>
+    <div id="map"></div>
+</div>
+
+    <!--   JavaScript files:   -->
+    <script src="js/shared.js"></script>
+    <script src="js/utility.js"></script>
+    <script src="js/addRoutePage.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyDyj8znTDMh4G7kH6bSC4zI-j2OoHBFbZU&callback=initMap&libraries=geometry"></script>
+</body>
+</html>
